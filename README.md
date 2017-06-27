@@ -1,2 +1,2 @@
-# jubilant-fortnight
-Just for testing.
+# Wikipedia Thumbnail Gallery Demo Using React-Router
+
