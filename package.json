@@ -3,17 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "axios-cache-plugin": "^0.0.7",
     "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "node-fetch": "^1.7.1",
+    "query-string": "^4.3.4",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.1"
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0",
     "react-scripts": "1.0.7"
   },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:7070"
+    }
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"node server\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

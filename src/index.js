@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './App';
-import TopNavbar from './TopNavbar';
+import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-let title="Wikipedia Thumbnail Gallery"
+let store = createStore(reducers);
 
 ReactDOM.render(
-  <TopNavbar title={title} />,
-  document.getElementById('top-navbar')
-);
-ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 registerServiceWorker();
