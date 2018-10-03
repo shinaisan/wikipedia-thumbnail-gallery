@@ -28,7 +28,8 @@
     }
   },
   "scripts": {
-    "start": "concurrently \"node server\" \"react-scripts start\"",
+    "start": "node server",
+    "dev:start": "concurrently \"node server\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
