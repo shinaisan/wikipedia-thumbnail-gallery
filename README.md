@@ -17,3 +17,4 @@ If none specified, the error "invalid host name" may be returned when accessing 
 HOST=ec2-xxx.compute.amazonaws.com
 ```
 
+EOF
